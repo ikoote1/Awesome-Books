@@ -42,7 +42,51 @@ class UI {
 
         list.appendChild(tableRow);
     }
+
+    static empty(){
+    document.querySelector('.title').value = '';
+    document.querySelector('.author').value = '';
+    }
+    static deleteBook(e){
+        if(e.classList.contains('remove-btn')){
+            e.parentElement.parentElement.remove();
+        }
+    }
 }
 
 // event:Display books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
+
+document.querySelector('.add-book-form').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const title = document.querySelector('.title').value;
+    const author = document.querySelector('.author').value;
+
+    const book = new Book (title,author);
+
+    UI.addBookToList(book);
+    UI.empty();
+});
+
+//Remove books
+document.querySelector('.table-body').addEventListener('click',(e)=>{
+    UI.deleteBook(e.target);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
