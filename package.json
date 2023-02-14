@@ -1,7 +1,7 @@
 {
   "name": "awesome-books",
   "version": "1.0.0",
-  "description": "",
+  "description": "- This is a website for storing books. # 📗 Table of Contents",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
