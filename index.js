@@ -10,7 +10,7 @@ class Book {
 class UI {
     static displayBooks() {
         
-        const books = Store.getBook();
+        const books = Store.getBooks();
 
         books.forEach((book) => UI.addBookToList(book));
     }
@@ -42,17 +42,19 @@ class UI {
 }
 
 class Store {
-    static getBook() {
+    static getBooks() {
         let books;
         if (localStorage.getItem('books') === null) {
             books = [];
         } else {
             books = JSON.parse(localStorage.getItem('books'));
         }
+        localStorage.getItem('books')
+        return books;
     }
     
     static addBook(book) {
-        const books = Store.getBook();
+        const books = Store.getBooks();
 
         books.push(book);
 
@@ -60,7 +62,7 @@ class Store {
     }
     
     static removeBook(title) {
-        const books = Store.getBook();
+        const books = Store.getBooks();
 
         books.forEach((book, index) => {
             if (book.title === title) {
@@ -75,7 +77,7 @@ class Store {
 // event:Display books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
-document.querySelector('.add-book-form').addEventListener('submit',(e)=>{
+document.querySelector('.add-book-form').addEventListener('submit',(e) => {
     e.preventDefault();
     const title = document.querySelector('.title').value;
     const author = document.querySelector('.author').value;
@@ -85,7 +87,7 @@ document.querySelector('.add-book-form').addEventListener('submit',(e)=>{
     // add book to UI
     UI.addBookToList(book);
 
-    // add book to the local storade
+    // add book to the local storage
     Store.addBook(book);
 
     // empty fields
@@ -94,5 +96,9 @@ document.querySelector('.add-book-form').addEventListener('submit',(e)=>{
 
 //Remove books
 document.querySelector('.table-body').addEventListener('click', (e) => {
+    // remove book from UI
     UI.deleteBook(e.target);
+
+    // Remove book from the local storage
+    Store.removeBook(e.target.parentElement.previousElementSibling.previousElementSibling.textContent)
 });
