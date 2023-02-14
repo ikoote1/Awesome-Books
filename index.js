@@ -9,22 +9,8 @@ class Book {
 // UI class
 class UI {
     static displayBooks() {
-        const storedBooks = [
-            {
-                title: 'imagination',
-                author: 'Dieum',
-            },
-            {
-                title: 'imagination 2',
-                author: 'Akonkwa',
-            },
-            {
-                title: 'imagination 3',
-                author: 'Lwabaguma',
-            }
-        ];
-
-        const books = storedBooks;
+        
+        const books = Store.getBook();
 
         books.forEach((book) => UI.addBookToList(book));
     }
@@ -47,10 +33,42 @@ class UI {
     document.querySelector('.title').value = '';
     document.querySelector('.author').value = '';
     }
+
     static deleteBook(e){
         if(e.classList.contains('remove-btn')){
             e.parentElement.parentElement.remove();
         }
+    }
+}
+
+class Store {
+    static getBook() {
+        let books;
+        if (localStorage.getItem('books') === null) {
+            books = [];
+        } else {
+            books = JSON.parse(localStorage.getItem('books'));
+        }
+    }
+    
+    static addBook(book) {
+        const books = Store.getBook();
+
+        books.push(book);
+
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+    
+    static removeBook(title) {
+        const books = Store.getBook();
+
+        books.forEach((book, index) => {
+            if (book.title === title) {
+                books.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('books', JSON.stringify(books));
     }
 }
 
@@ -64,29 +82,17 @@ document.querySelector('.add-book-form').addEventListener('submit',(e)=>{
 
     const book = new Book (title,author);
 
+    // add book to UI
     UI.addBookToList(book);
+
+    // add book to the local storade
+    Store.addBook(book);
+
+    // empty fields
     UI.empty();
 });
 
 //Remove books
-document.querySelector('.table-body').addEventListener('click',(e)=>{
+document.querySelector('.table-body').addEventListener('click', (e) => {
     UI.deleteBook(e.target);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
