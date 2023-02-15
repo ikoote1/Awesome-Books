@@ -1,13 +1,7 @@
 body {
   background-color: rgb(167, 171, 175);
 }
-.contact-section,
-.add-book-section{
-  display: none;
-}
-.show-block{
-  display: block;
-}
+
 .tables {
   width: 98%;
   height: auto;
@@ -21,6 +15,12 @@ body {
   position: fixed;
   width: 100%;
 }
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .nav-bar-list{
   background-color: #4949d4;
   display: flex;
@@ -40,6 +40,11 @@ body {
   float: right;
   gap: 30px;
   /* align-items: center; */
+}
+
+.nav-list li {
+  cursor: pointer;
+  color: #fff;
 }
 
 tr {
@@ -78,15 +83,29 @@ td {
 .book-displayed-section{
   padding-top: 40px;
 }
+
+.book-displayed-section.active {
+  display: none;
+}
+
 .all-books-title{
   margin-top: 80px;
 }
+
+/* add book section */
 
 .add-book-section{
   height: 100%;
   width: 100%;
   padding-top: 40px;
+  display: none;
+
 }
+
+.add-book-section.active {
+  display: block;
+}
+
 .add-book-title{
   margin-top: 80px;
 }
@@ -117,7 +136,13 @@ h2 {
 .contact-section {
   align-items: center;
   padding-top: 40px;
+  display: none;
 }
+
+.contact-section.active {
+  display: block;
+}
+
 .contact-title{
   margin-top: 80px;
 }
@@ -142,6 +167,7 @@ footer {
   height: 50px;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
 
 @media (min-width: 790px) {
