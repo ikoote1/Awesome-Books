@@ -17,14 +17,14 @@ body {
 }
 .nav-bar-list{
   background-color: #4949d4;
-  width: 96%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: #000;
   position: relative;
-  left: 2%;
-  padding: 0% 5% 0% 5%;
+  padding: 0 5%;
+  height: 50px;
+  align-items: center;
 }
 
 .nav-list{
@@ -33,6 +33,7 @@ body {
   flex-direction: row;
   float: right;
   gap: 30px;
+  /* align-items: center; */
 }
 
 tr {
@@ -87,11 +88,30 @@ h2 {
   left: 65%;
   background-color: #7a7ac2;
 }
-.foober-bar{
-  border: #000;
-  width: 98%;
-  position: relative;
-  left: 1%;
+
+/* contact section */
+
+.contact-section {
+  align-items: center;
+  margin: 40px 30%;
+}
+
+.contact-paragraph{
+  margin-top: 50px;
+}
+
+/* footer */
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4949d4;
+  display: flex;
+  position: fixed;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 790px) {
