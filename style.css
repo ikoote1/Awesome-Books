@@ -11,7 +11,8 @@ body {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.nar-bar{
+
+.nar-bar {
   position: fixed;
   width: 100%;
 }
@@ -21,7 +22,7 @@ body {
   text-decoration: none;
 }
 
-.nav-bar-list{
+.nav-bar-list {
   background-color: #4949d4;
   display: flex;
   flex-direction: row;
@@ -33,12 +34,13 @@ body {
   align-items: center;
 }
 
-.nav-list{
+.nav-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   float: right;
   gap: 30px;
+
   /* align-items: center; */
 }
 
@@ -80,7 +82,7 @@ td {
   background-color: #05052e;
   align-items: center;
 } */
-.book-displayed-section{
+.book-displayed-section {
   padding-top: 40px;
 }
 
@@ -88,25 +90,24 @@ td {
   display: none;
 }
 
-.all-books-title{
+.all-books-title {
   margin-top: 80px;
 }
 
 /* add book section */
 
-.add-book-section{
+.add-book-section {
   height: 100%;
   width: 100%;
   padding-top: 40px;
   display: none;
-
 }
 
 .add-book-section.active {
   display: block;
 }
 
-.add-book-title{
+.add-book-title {
   margin-top: 80px;
 }
 
@@ -143,15 +144,16 @@ h2 {
   display: block;
 }
 
-.contact-title{
+.contact-title {
   margin-top: 80px;
 }
 
-.contact-paragraph{
+.contact-paragraph {
   margin-top: 50px;
   margin-left: 30%;
 }
-.contact-list{
+
+.contact-list {
   margin-left: 30%;
 }
 
