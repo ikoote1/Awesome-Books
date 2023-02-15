@@ -25,7 +25,7 @@ class UI {
 
     tableRow.innerHTML = `
            <td>${book.title}</td>
-           <td>${book.author}</td>
+           <td class= "td-by">  By ${book.author}</td>
            <td><a href="#" class="remove-btn">Remove</a></td>
         `;
 
