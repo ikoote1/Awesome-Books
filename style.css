@@ -1,7 +1,8 @@
 body {
-background-color: rgb(167, 171, 175);  
+  background-color: rgb(167, 171, 175);
 }
-.tables{
+
+.tables {
   width: 50%;
   height: auto;
   border: 2px solid #000;
@@ -10,7 +11,8 @@ background-color: rgb(167, 171, 175);
   margin-top: 20px;
   margin-bottom: 20px;
 }
-tr{
+
+tr {
   border: 1px solid #000;
   height: 40px;
   background-color: rgb(199, 193, 193);
@@ -41,7 +43,7 @@ td {
   align-items: center;
 }
 
-.add-book-form{
+.add-book-form {
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -49,10 +51,12 @@ td {
   position: relative;
   left: 35%;
 }
-h2{
+
+h2 {
   text-align: center;
 }
-.submit-btn{
+
+.submit-btn {
   width: 35%;
   position: relative;
   left: 65%;
@@ -60,7 +64,7 @@ h2{
 }
 
 @media (min-width: 790px) {
-  .submit-btn{
+  .submit-btn {
     width: 20%;
     position: relative;
     left: 80%;
