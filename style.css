@@ -1,3 +1,29 @@
 body {
-  margin: 20px;
+  /* align-items: center; */
+  /* align-content: center; */
+  
+  /* text-align: center; */
+}
+
+.container-div {
+  margin: 0 20%;
+}
+
+.all-books-title {
+  text-align: center;
+}
+
+.table-body {
+  /* width: 600px; */
+  border: 2px solid #000;
+}
+
+.table-body tr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.table-body tr td .remove-btn{
+  /* justify-content: flex-end; */
 }
