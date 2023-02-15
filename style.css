@@ -1,14 +1,20 @@
 body {
   background-color: rgb(167, 171, 175);
 }
-
+.contact-section,
+.add-book-section{
+  display: none;
+}
+.show-block{
+  display: block;
+}
 .tables {
-  width: 50%;
+  width: 98%;
   height: auto;
   border: 2px solid #000;
   position: relative;
-  left: 25%;
-  margin-top: 20px;
+  left: 1%;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 .nar-bar{
@@ -43,6 +49,7 @@ tr {
 }
 
 td {
+  padding-left: 2%;
   font-size: 15px;
 }
 
@@ -61,21 +68,37 @@ td {
   color: #fff;
 }
 
-.line {
+/* .line {
   width: 20%;
   margin: 40px 40% 20px 40%;
   height: 2px;
   background-color: #05052e;
   align-items: center;
+} */
+.book-displayed-section{
+  padding-top: 40px;
+}
+.all-books-title{
+  margin-top: 80px;
+}
+
+.add-book-section{
+  height: 100%;
+  width: 100%;
+  padding-top: 40px;
+}
+.add-book-title{
+  margin-top: 80px;
 }
 
 .add-book-form {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 30px;
   width: 30%;
   position: relative;
   left: 35%;
+  padding-top: 60px;
 }
 
 h2 {
@@ -93,11 +116,18 @@ h2 {
 
 .contact-section {
   align-items: center;
-  margin: 40px 30%;
+  padding-top: 40px;
+}
+.contact-title{
+  margin-top: 80px;
 }
 
 .contact-paragraph{
   margin-top: 50px;
+  margin-left: 30%;
+}
+.contact-list{
+  margin-left: 30%;
 }
 
 /* footer */
